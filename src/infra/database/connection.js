@@ -1,8 +1,8 @@
-import { Pool } from 'pg';
+const { Pool } = require('pg');
 
 const config = {
   user: 'postgres',        
-  password: 'password',    
+  password: 'postgres',    
   host: 'localhost',       
   port: 5432,              
   database: 'farmaki_db'   

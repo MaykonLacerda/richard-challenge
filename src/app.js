@@ -1,11 +1,13 @@
-const express = require('express')
+const express = require('express');
+const { router } = require('./routes');
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Richard!')
-})
+app.use(express.json());
+app.use(router);
+
+app.get('/', (req, res) => res.json({ message: 'farmaki_api' }));
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`App listening on port ${port}`)
 })
